@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  labels:
+    app: nginx
+    app: promtail
 spec:
   selector:
     matchLabels:
@@ -19,6 +22,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: nginx-sts
+  labels:
+    app: nginx
 spec:
   serviceName: nginx-sts
   selector:
@@ -37,6 +42,8 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: nginx-ds
+  labels:
+    app: nginx
 spec:
   selector:
     matchLabels:
@@ -54,6 +61,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment-with-label
+  labels:
+    app: nginx
 spec:
   selector:
     matchLabels:
