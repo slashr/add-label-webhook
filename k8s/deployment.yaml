@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mutating-webhook
-        image: eu.gcr.io/uai-production/registry.understand.ai/infrastructure/validation-webhook-akash:latest
+        image: docker-registry/validation-webhook-akash:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
